@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistem Lab</title>
+    <style>
+        body { font-family: Arial; background: #f2f2f2; margin: 0; padding: 20px; }
+        .box { width: 900px; margin: auto; background: white; padding: 20px; margin-top: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        input, select, textarea { width: 100%; padding: 8px; margin: 5px 0; box-sizing: border-box; }
+        textarea { height: 80px; resize: vertical; }
+        button { padding: 10px; background: blue; color: white; border: none; cursor: pointer; width: 100%; font-weight: bold; }
+        button:hover { background: darkblue; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        td, th { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #eee; }
+        hr { margin: 25px 0; border: 0; border-top: 1px solid #ccc; }
+        .logout-btn { color: red; text-decoration: none; font-weight: bold; }
+        .logout-btn:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<div class="box">
+
+    <h2>Login Sistem Lab</h2>
+    <form action="#" method="get">
+        <input name="username" placeholder="Username" value="admin">
+        <input type="password" name="password" placeholder="Password" value="******">
+        <button type="button" onclick="alert('Ini adalah simulasi HTML statis. Anda sudah otomatis dianggap login di bawah.')">Login</button>
+    </form>
+
+    <hr>
+
+    <h2>Dashboard Peminjaman Lab</h2>
+    <p>Login sebagai: <b>Admin Demo</b></p>
+    <a href="#" class="logout-btn" onclick="alert('Fitur logout memerlukan PHP untuk menghapus session.')">Logout</a>
+
+    <hr>
+
+    <h3>Tambah Peminjaman</h3>
+    <form action="#" method="get">
+        <label>Lab</label>
+        <select name="id_lab">
+            <option value="1">Laboratorium Komputer 1</option>
+            <option value="2">Laboratorium Komputer 2</option>
+            <option value="3">Laboratorium Bahasa</option>
+            <option value="4">Laboratorium Jaringan & Mikrotik</option>
+        </select>
+
+        <input type="date" name="tgl" value="2026-06-03">
+        <input type="time" name="jam1" value="08:00">
+        <input type="time" name="jam2" value="10:00">
+        <textarea name="ket" placeholder="Keperluan">Praktikum Basis Data Kelas Pemrograman</textarea>
+
+        <button type="button" onclick="alert('Data tidak dapat disimpan karena HTML statis tidak terhubung ke database.')">Simpan</button>
+    </form>
+
+    <hr>
+
+    <h3>Data Peminjaman</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Lab</th>
+                <th>Tanggal</th>
+                <th>Jam</th>
+                <th>Keperluan</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>103</td>
+                <td>Laboratorium Komputer 1</td>
+                <td>2026-06-03</td>
+                <td>08:00 - 10:00</td>
+                <td>Praktikum Basis Data Kelas Pemrograman</td>
+                <td><a href="#" style="color: red;" onclick="alert('Aksi hapus tidak berfungsi di HTML murni')">Hapus</a></td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Laboratorium Jaringan & Mikrotik</td>
+                <td>2026-06-04</td>
+                <td>13:00 - 15:30</td>
+                <td>Sertifikasi Cisco CCNA</td>
+                <td><a href="#" style="color: red;" onclick="alert('Aksi hapus tidak berfungsi di HTML murni')">Hapus</a></td>
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>Laboratorium Bahasa</td>
+                <td>2026-06-02</td>
+                <td>10:00 - 12:00</td>
+                <td>Tes TOEFL Mahasiswa Akhir</td>
+                <td><a href="#" style="color: red;" onclick="alert('Aksi hapus tidak berfungsi di HTML murni')">Hapus</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>
